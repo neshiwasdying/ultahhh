@@ -1,0 +1,166 @@
+/* Styling dasar untuk tata letak */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #fdb9cb;
+    margin: 0;
+}
+
+/* Amplop */
+.envelope {
+    position: relative;
+    cursor: pointer;
+    width: 250px;
+    height: 200px;
+}
+
+/* Bagian belakang amplop */
+.back {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    background-color: #cc7a93;
+}
+
+/* Bagian depan amplop */
+.front {
+    position: absolute;
+    border-right: 130px solid #dd8fa6;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 120px;
+    z-index: 3;
+}
+
+.front::before {
+    content: "";
+    position: absolute;
+    border-left: 130px solid #dd8fa6;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    height: 0;
+    width: 0;
+    top: -100px;
+    left: -120px;
+}
+
+.front::after {
+    content: '';
+    position: absolute;
+    border-bottom: 105px solid #da849e;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: -5px;
+    left: -120px;
+}
+
+/* Bagian tutup amplop */
+.top {
+    position: absolute;
+    border-top: 105px solid #f1a7be;
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transition: transform 0.4s ease;
+}
+
+/* Surat di dalam amplop */
+.letter {
+    position: absolute;
+    background-color: white;
+    width: 230px;
+    height: 180px;
+    top: 10px;
+    left: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* Efek saat amplop dibuka dengan klik */
+.envelope.open .top {
+    transform: rotateX(160deg);
+    z-index: 2;
+}
+
+.envelope.open .letter {
+    transform: translateY(-100px);
+    z-index: 3;
+}
+
+/* Desain teks di dalam surat */
+.text1 {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    top: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+    top: -10px;
+    left: 0;
+}
+
+/* Efek bayangan di bawah amplop */
+.shadow {
+    position: absolute;
+    width: 250px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    top: 210px;
+    left: 0;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+/* Tombol Click Here yang lebih minimalis */
+.text a {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5c8a;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+/* Efek hover */
+.text a:hover {
+    background-color: #e64973;
+}
+
+/* Efek klik */
+.text a:active {
+    background-color: #d43760;
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 600px) {
+    .text a {
+        font-size: 16px;
+        padding: 14px 22px;
+        width: auto;
+    }
+}

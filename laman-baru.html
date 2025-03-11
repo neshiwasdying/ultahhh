@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar Fullscreen</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+        .fullscreen-img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .fullscreen-img {
+                object-fit: contain;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img class="fullscreen-img" src="IMG_0477.JPG" alt="Gambar Fullscreen">
+</body>
+</html>

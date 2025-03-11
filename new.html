@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photocard Spesial</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fce4ec;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .photocard {
+            width: 250px;
+            height: 180px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+            padding: 20px;
+            position: relative;
+        }
+        .photocard img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        }
+        .btn:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <div class="photocard">
+        <img id="photo" src="download (7).jpeg" alt="Foto">
+    </div>
+    <div class="caption">Kucing penyihir ini akan menyinari harimu</div>
+    <div class="button-container">
+        <a href="laman-baru.html">
+            <button class="btn">Kucing ini akan membuatkan mu ucapan selamat, klik tombol ini</button>
+        </a>
+    </div>
+</body>
+</html>
